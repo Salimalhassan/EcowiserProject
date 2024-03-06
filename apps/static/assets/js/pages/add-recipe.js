@@ -19,7 +19,7 @@ function submit_entry(){
        
     };
    
-    fetch('http://127.0.0.1:5000/addrecipe' ,
+    fetch('https://ecowiserproject.onrender.com/addrecipe' ,
     {
       method: "POST",
       cridentials: "include",
