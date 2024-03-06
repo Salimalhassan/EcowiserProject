@@ -1,0 +1,97 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Tables {% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <section class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+                    <div class="page-header">
+                        <div class="page-block">
+                            <div class="row align-items-center">
+                                <div class="col-md-12">
+                                    <div class="page-header-title">
+                                        <h5 class="m-b-10">Bootstrap Basic Tables</h5>
+                                    </div>
+                                    <ul class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
+                                        <li class="breadcrumb-item"><a href="#!">RECIPE</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:">CHECK YOUR FAVOURITE</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ breadcrumb ] end -->
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <!-- [ Main Content ] start -->
+                            <div class="row">
+                                <!-- [ basic-table ] start -->
+                                <div class="col-xl-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>all recipe list</h5>
+                                            <span class="d-block m-t-5">high classy <code>list</code> for recipe</span>
+                                        </div>
+                                        <div class="card-block table-border-style container">
+                                            <div class="table-responsive">
+                                                <table class="table table-responsive-md table-bordered text-wrap" style="max-wi">
+                                                    <thead class="thead-dark">
+                                                        <tr>
+                                                            <th>S/N</th>
+                                                            <th>title</th>
+                                                            <th>cuisine</th>
+                                                            <th>meal</th>
+                                                            <th>description</th>
+                                                            <th>ingredients</th>
+                                                            <th>directions</th>
+                                                            
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="text-wrap">
+                                                        {% for recipe in recipes %}
+                                                        <tr>
+                                                            <td class="text-wrap">{{recipe.id}}</td>
+                                                            <td class="text-wrap">{{recipe.recipe_title}}</td>
+                                                            <td class="text-wrap">{{recipe.cuisine}}</td>
+                                                            <td class="text-wrap">{{recipe.meal}}</th>
+                                                            <td class="text-wrap"><div style="width:10rems;">{{recipe.description}}</div></td>
+                                                            <td class="text-wrap">{{recipe.ingredients}}</td>
+                                                            <td class="text-wrap">{{recipe.directions}}</td>
+                                                        </tr>
+   
+                                                        {% endfor %} 
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- [ basic-table ] end -->
+
+                                <!-- [ Hover-table ] start --><!-- [ stiped-table ] end -->
+                            </div>
+                            <!-- [ Main Content ] end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <!-- [ Main Content ] end -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
